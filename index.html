@@ -205,67 +205,51 @@
     </header>
 
     <!-- Team Section -->
-    <section id="team" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-heading font-bold text-ugm-blue">Kakak Alumni SMAN 3 Sumedang</h2>
-                <div class="w-24 h-1.5 bg-ugm-yellow mx-auto rounded-full mt-3"></div>
-                <p class="mt-4 text-gray-600 font-medium text-lg">Siap membimbing kalian menuju Kampus Kerakyatan</p>
-            </div>
-
-            <div class="flex flex-wrap justify-center gap-8 mb-20">
-    <!-- Link Font Lucu dari Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
-
-    <div class="w-56 md:w-64 bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition text-center hover-lift border border-gray-100 group" data-aos="zoom-in">
-        
-        <div class="relative inline-block">
-            
-            <!-- 1. BUBBLE CHAT DISAMPING (Tidak Menutupi Gambar) -->
-            <!-- left-[105%] memastikan bubble berada di luar area gambar -->
-            <div class="absolute left-[105%] top-[-10px] w-44 p-3 bg-white text-ugm-blue text-[11px] leading-tight shadow-[5px_5px_20px_rgba(0,0,0,0.08)] border-2 border-blue-50 opacity-0 animate-pop-cute z-30 pointer-events-none rounded-[20px] rounded-bl-none"
-                 style="font-family: 'Quicksand', 'Comic Sans MS', cursive;">
-                
-                "Mau mutual ig? Boleh DM aku kalau ada pertanyaan ya! (santai aja)"
-                
-                <!-- Ekor Bubble Menunjuk ke Gambar -->
-                <div class="absolute bottom-0 -left-3 w-4 h-4 bg-white border-l-2 border-b-2 border-blue-50 [clip-path:polygon(100%_0,0%_100%,100%_100%)]"></div>
-            </div>
-
-            <!-- 2. GAMBAR UTAMA -->
-            <a href="https://www.instagram.com/giwa.tulung.agung" target="_blank" class="block mb-2 overflow-hidden transform group-hover:scale-110 transition cursor-pointer relative z-10">
-                <img src="https://image2url.com/r2/default/images/1768369157278-f8066e6c-6e39-4609-a59f-c89a8ab050f2.png" 
-                     alt="Kakek Gamatsu" 
-                     class="w-24 h-auto mx-auto object-contain">
-            </a>
+   <section id="team" class="py-16 bg-gray-50 overflow-hidden"> <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-ugm-blue">Kakak Alumni SMAN 3 Sumedang</h2>
+            <div class="w-24 h-1.5 bg-ugm-yellow mx-auto rounded-full mt-3"></div>
+            <p class="mt-4 text-gray-600 font-medium text-lg">Siap membimbing kalian menuju Kampus Kerakyatan</p>
         </div>
 
-        <h3 class="font-bold text-ugm-blue text-lg leading-tight">Giwa Tulung Agung</h3>
-        <p class="text-xs font-normal text-gray-600 leading-tight italic">(@giwa.tulung.agung)</p>
-        <p class="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-1">Fakultas Psikologi UGM</p>
+        <div class="flex flex-wrap justify-center gap-8 mb-20 pr-28 md:pr-0">
+            
+            <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+
+            <div class="w-56 md:w-64 bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition text-center hover-lift border border-gray-100 group" data-aos="zoom-in">
+                
+                <div class="relative inline-block">
+                    
+                    <div class="absolute left-[80%] top-0 w-32 p-2 bg-white text-ugm-blue text-[9px] leading-tight shadow-md border border-blue-50 opacity-0 animate-pop-cute z-30 pointer-events-none rounded-lg rounded-bl-none text-left"
+                      style="font-family: 'Quicksand', sans-serif;">
+                        "Mau mutualan ig? DM aku aja ya! (santai)"
+                        <div class="absolute bottom-0 -left-2 w-3 h-3 bg-white border-l border-b border-blue-50 [clip-path:polygon(100%_0,0%_100%,100%_100%)]"></div>
+                    </div>
+
+                    <a href="https://www.instagram.com/giwa.tulung.agung" target="_blank" class="block mb-2 overflow-hidden transform group-hover:scale-110 transition cursor-pointer relative z-10">
+                        <img src="https://image2url.com/r2/default/images/1768369157278-f8066e6c-6e39-4609-a59f-c89a8ab050f2.png" 
+                             alt="Kakek Gamatsu" 
+                             class="w-24 h-auto mx-auto object-contain">
+                    </a>
+                </div>
+
+                <h3 class="font-bold text-ugm-blue text-lg leading-tight">Giwa Tulung Agung</h3>
+                <p class="text-xs font-normal text-gray-600 leading-tight italic">(@giwa.tulung.agung)</p>
+                <p class="text-[10px] font-bold text-gray-500 uppercase tracking-wider mt-1">Fakultas Psikologi UGM</p>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 
 <style>
-    /* Animasi Pop yang lebih "Bouncy" dan Lucu */
     @keyframes pop-cute {
-        0% { 
-            opacity: 0; 
-            transform: scale(0) rotate(-10deg); 
-        }
-        70% { 
-            opacity: 1; 
-            transform: scale(1.1) rotate(5deg); 
-        }
-        100% { 
-            opacity: 1; 
-            transform: scale(1) rotate(0deg); 
-        }
+        0% { opacity: 0; transform: scale(0) rotate(-10deg); }
+        70% { opacity: 1; transform: scale(1.1) rotate(5deg); }
+        100% { opacity: 1; transform: scale(1) rotate(0deg); }
     }
-
     .animate-pop-cute {
         animation: pop-cute 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-        animation-delay: 1.8s; /* Muncul sedikit lebih lambat agar dramatis */
+        animation-delay: 2.5s; 
     }
 </style>
             
