@@ -219,19 +219,35 @@
             <div class="w-56 md:w-64 bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition text-center hover-lift border border-gray-100 group" data-aos="zoom-in">
                 
                 <div class="relative inline-block">
-                    
-                    <div class="absolute left-[80%] top-0 w-32 p-2 bg-white text-ugm-blue text-[9px] leading-tight shadow-md border border-blue-50 opacity-0 animate-pop-cute z-30 pointer-events-none rounded-lg rounded-bl-none text-left"
-                      style="font-family: 'Quicksand', sans-serif;">
-                        "Mau mutualan ig? DM aku aja ya! (santai)"
-                        <div class="absolute bottom-0 -left-2 w-3 h-3 bg-white border-l border-b border-blue-50 [clip-path:polygon(100%_0,0%_100%,100%_100%)]"></div>
-                    </div>
-
-                    <a href="https://www.instagram.com/giwa.tulung.agung" target="_blank" class="block mb-2 overflow-hidden transform group-hover:scale-110 transition cursor-pointer relative z-10">
-                        <img src="https://image2url.com/r2/default/images/1768369157278-f8066e6c-6e39-4609-a59f-c89a8ab050f2.png" 
-                             alt="Kakek Gamatsu" 
-                             class="w-24 h-auto mx-auto object-contain">
-                    </a>
+                  <div onclick="copyAndOpenDM(this, 'Kak Giwa', 'giwa.tulung.agung')" 
+                    class="absolute left-[100%] top-0 w-32 p-2 bg-white text-ugm-blue text-[9px] leading-tight shadow-md border border-blue-50 opacity-0 animate-pop-cute z-30 cursor-pointer hover:bg-gray-50 transition active:scale-95 rounded-lg rounded-bl-none text-left group-bubble"
+                    style="font-family: 'Quicksand', sans-serif;">
+         
+                    <span>"Hai aku Giwa, mau mutualan ig? kalau mau nanya-nana boleh klik aku buat DM ya! (santai)"</span>
+         
+                    <div class="copy-success hidden absolute inset-0 bg-ugm-blue text-white rounded-lg flex items-center justify-center font-bold text-[10px]">
+                    Teks Disalin! ✅
+                  </div>
+                <div class="absolute bottom-0 -left-2 w-3 h-3 bg-white border-l border-b border-blue-50 [clip-path:polygon(100%_0,0%_100%,100%_100%)]"></div>
+              </div>
+              
+                  <div onclick="copyAndOpenDM(this, 'Kak Giwa', 'giwa.tulung.agung')" 
+                   class="absolute left-[150%] top-[60px] w-28 p-2 bg-yellow-300 text-ugm-blue text-[9px] font-bold leading-tight shadow-md border-2 border-white opacity-0 animate-pop-cute z-40 cursor-pointer hover:bg-yellow-400 transition active:scale-95 rounded-lg -rotate-6 hover:rotate-0 text-center"
+                    style="font-family: 'Quicksand', sans-serif; animation-delay: 3.2s;">
+         
+                    <span>⚡Aku lolos di SNBT 2025, loh! </span>
+                    <div class="copy-success hidden absolute inset-0 bg-ugm-blue text-white rounded-lg flex items-center justify-center font-bold text-[10px] rotate-6">
+                     Siap! ✅
                 </div>
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-4 bg-white/40 backdrop-blur-sm rotate-2"></div>
+           </div>
+              
+    <a href="https://www.instagram.com/giwa.tulung.agung" target="_blank" class="block mb-2 overflow-hidden transform group-hover:scale-110 transition cursor-pointer relative z-10">
+        <img src="https://image2url.com/r2/default/images/1768369157278-f8066e6c-6e39-4609-a59f-c89a8ab050f2.png" 
+             alt="Kakek Gamatsu" 
+             class="w-24 h-auto mx-auto object-contain">
+    </a>
+</div>
 
                 <h3 class="font-bold text-ugm-blue text-lg leading-tight">Giwa Tulung Agung</h3>
                 <p class="text-xs font-normal text-gray-600 leading-tight italic">(@giwa.tulung.agung)</p>
@@ -252,6 +268,35 @@
         animation-delay: 2.5s; 
     }
 </style>
+<script>
+    function copyAndOpenDM(element, nickname, username) {
+        // 1. Template Pesan (Otomatis ganti nama kakak)
+        const message = `${nickname}, nama aku (nama kamu), aku mau nanya-nanya dong ${nickname}! :D`;
+        
+        // 2. Link DM
+        const igLink = `https://ig.me/m/giwa.tulung.agung`;
+
+        // 3. Cari elemen notifikasi "sukses" DI DALAM bubble yang diklik saja
+        const successMsg = element.querySelector('.copy-success');
+
+        // 4. Proses Copy
+        navigator.clipboard.writeText(message).then(() => {
+            
+            // Tampilkan notifikasi
+            successMsg.classList.remove('hidden');
+
+            // Buka IG & Sembunyikan notif setelah jeda
+            setTimeout(() => {
+                window.open(igLink, '_blank');
+                successMsg.classList.add('hidden'); 
+            }, 800);
+            
+        }).catch(err => {
+            console.error('Gagal copy:', err);
+            window.open(igLink, '_blank'); // Tetap buka IG meski copy gagal
+        });
+    }
+</script>
             
     <!-- Profil UGM -->
     <section id="profil" class="relative -mt-16 pt-12 pb-20 bg-white overflow-hidden rounded-[3rem] md:rounded-[5rem] shadow-[0_20px_50px_rgba(0,0,0,0.08)] z-10">
