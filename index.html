@@ -1235,13 +1235,18 @@
                         <h4 class="font-bold text-gray-800 text-sm">Masa unduh sertifikat UTBK</h4>
                         <p class="text-[11px] text-gray-500 mt-1">Mulai Perjalanan Akademikmu  </p>
                     </div>
-                </div> <div class="mt-12 max-w-5xl mx-auto" data-aos="fade-up">
+                    </div>
+               </div>
+           </div>
+         </div>
+    </div>
+</section>
+<section id="Informasi penting">
+                </div> <div class="mt-0 max-w-5xl mx-auto" data-aos="fade-up">
             <div class="bg-yellow-50 border border-yellow-200 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 shadow-sm relative overflow-hidden group hover:shadow-md transition-all">
-                
                 <div class="absolute -right-6 -top-6 text-yellow-100 text-9xl z-0 transform rotate-12 group-hover:rotate-0 transition duration-700">
                     <i class="fas fa-bullhorn"></i>
                 </div>
-
                 <div class="relative z-10 flex-grow text-center md:text-left">
                     <h4 class="text-base md:text-xl font-heading font-bold text-ugm-blue flex items-center justify-center md:justify-start gap-2 mb-2">
                         <i class="fas fa-info-circle text-orange-500"></i>
@@ -1251,7 +1256,6 @@
                         Timeline resmi untuk <strong>Jalur Mandiri (CBT, PBU, Tridharma)</strong> dan <strong>IUP</strong> belum dirilis sepenuhnya. Agar informasi lebih akurat dan ter-update, silakan kunjungi laman resmi UM UGM.
                     </p>
                 </div>
-
                 <div class="relative z-10 flex-shrink-0 w-full md:w-auto">
                     <a href="https://um.ugm.ac.id/jadwal-seleksi-program-sarjana-dan-program-sarjana-terapan-2025/" target="_blank" class="flex items-center justify-center gap-2 w-full md:w-auto px-6 py-3.5 bg-ugm-blue text-white rounded-xl font-bold text-sm hover:bg-blue-900 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                         <span>Cek Jadwal Resmi UGM</span>
@@ -1549,7 +1553,7 @@
                     <div class="flex justify-between items-start">
                         <div>
                             <h4 class="font-bold text-lg text-gray-800 group-hover:text-ugm-gold">Jalur Mandiri</h4>
-                            <p class="text-sm text-gray-500 mt-1">UM-UGM, CBT, & PBU (UKT + IPI)</p>
+                            <p class="text-sm text-gray-500 mt-1">UM-UGM, CBT, & PBU (UKT atau dengan IPI dengan penyesuaian)</p>
                         </div>
                         <i class="fas fa-chevron-right text-gray-300 group-hover:text-ugm-gold transition-transform group-hover:translate-x-2"></i>
                     </div>
@@ -1680,224 +1684,199 @@
     </div>
 </div>
     
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
-    .retro-slider {
-        -webkit-appearance: none; width: 100%; height: 8px; background: #374151; border-radius: 4px; outline: none;
-    }
-    .retro-slider::-webkit-slider-thumb {
-        -webkit-appearance: none; appearance: none; width: 20px; height: 20px; background: #F2C94C; border: 2px solid #fff; border-radius: 50%; cursor: pointer; box-shadow: 0 0 10px rgba(242, 201, 76, 0.5);
-    }
-    .font-pixel { 
-        font-family: 'Press Start 2P', cursive; 
-        line-height: 1.8; /* Spasi baris agar tulisan pixel enak dibaca */
-    }
-    
-    /* Animasi Pop Up Naik Perlahan */
-    @keyframes rpg-fade-up {
-        0% { transform: translateY(20px); opacity: 0; }
-        100% { transform: translateY(0); opacity: 1; }
-    }
-    .animate-rpg { animation: rpg-fade-up 0.4s ease-out forwards; }
+    /* Font Styles */
+    .font-apple { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+    .font-retro { font-family: 'Press Start 2P', cursive; line-height: 1.6; }
 
-    /* Cursor kedip-kedip di pojok bubble */
-    @keyframes blink { 50% { opacity: 0; } }
-    .cursor-blink { animation: blink 1s step-end infinite; }
+    /* Glassmorphism Window (Container Utama) */
+    .glass-window {
+        background: rgba(255, 255, 255, 0.80);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    /* Retro Bubble Styles (Biru & Kuning) */
+    .retro-box {
+        background-color: #1e40af; /* Biru Tua */
+        border: 4px solid #fff;
+        box-shadow: 4px 4px 0px #000;
+    }
+
+    /* Animasi Pop Up Bubble */
+    @keyframes slideUpFade {
+        0% { transform: translateY(20px); opacity: 0; display: none; }
+        100% { transform: translateY(0); opacity: 1; display: flex; }
+    }
+    .animate-popup {
+        animation: slideUpFade 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
 </style>
 
-<section class="pt-0 pb-20 bg-white overflow-hidden">
-    <div class="container mx-auto px-4 flex justify-center">
-        <div class="relative w-full max-w-5xl" data-aos="zoom-in">
-            
-            <div class="absolute -top-10 -right-10 w-40 h-40 bg-blue-500 rounded-full opacity-20 blur-[100px]"></div>
-            <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-purple-500 rounded-full opacity-20 blur-[100px]"></div>
-
-            <div class="relative bg-gray-900 rounded-[3rem] p-4 md:p-6 shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-b-8 border-gray-950 flex items-center justify-between gap-4 md:gap-8">
-                
-                <div class="hidden md:flex flex-col items-center justify-center gap-6 w-24">
-                    <div class="relative w-20 h-20 bg-gray-800 rounded-full border-4 border-gray-950 flex items-center justify-center shadow-inner">
-                        <i class="fas fa-plus text-5xl text-gray-700 drop-shadow-lg"></i>
-                    </div>
-                    <div class="w-12 h-12 bg-gray-800 rounded-full border-4 border-gray-950 shadow-lg flex items-center justify-center">
-                        <div class="w-8 h-8 bg-gray-700 rounded-full border-2 border-gray-600"></div>
-                    </div>
-                </div>
-
-                <div class="relative flex-grow bg-black rounded-2xl overflow-hidden aspect-video border-[6px] border-gray-950 shadow-[inset_0_0_20px_rgba(0,0,0,0.8)] z-10 group">
-                    
-                    <div id="videoContainer" class="relative w-full h-full">
-                        
-                        <video id="myVideo" class="w-full h-full object-cover" 
-                               playsinline disablePictureInPicture controlsList="nodownload" 
-                               oncontextmenu="return false;">
-                            <source src="https://image2url.com/r2/default/videos/1768394132781-01d59a63-23e0-43fe-aeaa-29c206bfe40b.mp4" type="video/mp4">
-                            Browser anda tidak mendukung video.
-                        </video>
-
-                        <div class="absolute top-4 right-4 z-10 pointer-events-none opacity-50 select-none bg-black/30 px-2 py-1 rounded backdrop-blur-sm">
-                            <p class="text-[8px] text-white font-bold tracking-widest">UGM-CONSOLE</p>
-                        </div>
-
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4 flex flex-col gap-2 z-20 opacity-0 group-hover:opacity-100 transition duration-300">
-                            <div class="flex justify-between text-[10px] text-gray-300 font-mono mb-1">
-                                <span id="currentTime">00:00</span>
-                                <span id="duration">00:00</span>
-                            </div>
-                            <input type="range" id="seekSlider" class="retro-slider" min="0" max="100" value="0" step="0.1">
-                            
-                            <div class="md:hidden flex justify-center gap-6 mt-2 text-white">
-                                <button onclick="togglePlay()"><i id="mobilePlayIcon" class="fas fa-play"></i></button>
-                                <button onclick="toggleMute()"><i id="mobileMuteIcon" class="fas fa-volume-up"></i></button>
-                                <button onclick="toggleFullscreen()"><i class="fas fa-expand"></i></button>
-                            </div>
-                        </div>
-
-                        <div id="gamePopup" class="hidden absolute inset-0 z-50 flex items-end justify-center pb-6 md:pb-8 bg-black/70 backdrop-blur-sm">
-                            
-                            <div class="relative w-full max-w-xl px-6 flex items-end animate-rpg">
-                                
-                                <img src="https://image2url.com/r2/default/images/1768369157278-f8066e6c-6e39-4609-a59f-c89a8ab050f2.png" 
-                                     class="absolute bottom-[-10px] left-2 w-32 md:w-44 z-10 drop-shadow-2xl filter brightness-110 contrast-125" 
-                                     alt="Pixel Gamada">
-                                
-                                <div class="relative z-20 w-full ml-24 bg-blue-800 border-[6px] border-white shadow-[8px_8px_0_#000] p-4 md:p-6 rounded-sm">
-                                    
-                                    <div class="absolute -top-5 left-4 bg-yellow-400 border-4 border-white px-3 py-1 shadow-[4px_4px_0_#000]">
-                                        <span class="text-blue-900 font-pixel text-[9px] md:text-[10px] font-bold">GIWA</span>
-                                    </div>
-
-                                    <p class="text-white font-pixel text-[9px] md:text-[10px] mb-4 tracking-wide">
-                                        Videonya sudah selesai, Kak! <br> Jangan lupa scan <span class="text-yellow-300">QR Code</span> tadi ya. <br>
-                                        Kalau bingung, tanyakan di <span class="text-green-300">Padlet</span> atau <span class="text-green-300">WA Grup</span> kami!
-                                    </p>
-
-                                    <div class="absolute bottom-4 right-4 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white cursor-blink"></div>
-
-                                    <div class="flex gap-3 mt-2 justify-end border-t border-blue-600 pt-3">
-                                        <button onclick="replayVideo()" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white font-pixel text-[8px] border-2 border-gray-400 shadow-[4px_4px_0_#000] active:translate-y-1 active:shadow-none transition-all">
-                                            ULANGI ↺
-                                        </button>
-                                        <a href="https://padlet.com/GamadaMenyapa/langkah-awal-untuk-menjadi-gamada-xytxb9wispq621u7" target="_blank" class="px-4 py-2 bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-pixel text-[8px] border-2 border-white shadow-[4px_4px_0_#000] active:translate-y-1 active:shadow-none transition-all font-bold">
-                                            PADLET ➤
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        </div>
-                    
-                    <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent pointer-events-none z-0"></div>
-                </div>
-
-                <div class="hidden md:flex flex-col items-center justify-center gap-6 w-24">
-                    <div class="relative w-24 h-24 bg-gray-800 rounded-full border-4 border-gray-950 grid grid-cols-3 grid-rows-3 p-1 shadow-inner rotate-45">
-                        <button onclick="togglePlay()" class="col-start-2 row-start-1 -rotate-45 transform hover:scale-110 transition active:scale-90 group focus:outline-none">
-                            <i id="btnTriangle" class="fas fa-caret-up text-green-500 text-3xl filter drop-shadow-md group-hover:text-green-400"></i>
-                        </button>
-                        <button onclick="toggleFullscreen()" class="col-start-3 row-start-2 flex items-center justify-center -rotate-45 transform hover:scale-110 transition active:scale-90 group focus:outline-none">
-                            <i class="far fa-circle text-red-500 text-2xl font-bold filter drop-shadow-md group-hover:text-red-400"></i>
-                        </button>
-                        <button onclick="replayVideo()" class="col-start-2 row-start-3 -rotate-45 transform hover:scale-110 transition active:scale-90 group focus:outline-none">
-                            <i class="fas fa-times text-blue-500 text-2xl filter drop-shadow-md group-hover:text-blue-400"></i>
-                        </button>
-                        <button onclick="toggleMute()" class="col-start-1 row-start-2 flex items-center justify-center -rotate-45 transform hover:scale-110 transition active:scale-90 group focus:outline-none">
-                            <i id="btnSquare" class="far fa-square text-pink-500 text-xl font-bold filter drop-shadow-md group-hover:text-pink-400"></i>
-                        </button>
-                    </div>
-                    <div class="w-12 h-12 bg-gray-800 rounded-full border-4 border-gray-950 shadow-lg flex items-center justify-center">
-                        <div class="w-8 h-8 bg-gray-700 rounded-full border-2 border-gray-600"></div>
-                    </div>
-                </div>
-
-            </div>
-            
-            <div class="hidden md:flex justify-center gap-8 mt-6 text-[10px] text-gray-400 font-pixel uppercase tracking-widest opacity-70">
-                <div class="flex items-center gap-2"><i class="fas fa-caret-up text-green-500"></i> Play/Pause</div>
-                <div class="flex items-center gap-2"><i class="far fa-square text-pink-500"></i> Mute</div>
-                <div class="flex items-center gap-2"><i class="fas fa-times text-blue-500"></i> Reset</div>
-                <div class="flex items-center gap-2"><i class="far fa-circle text-red-500"></i> Fullscreen</div>
-            </div>
-
+<div id="floatBtnContainer" class="fixed bottom-6 left-1/2 -translate-x-1/2 md:bottom-10 z-[9000] opacity-0 translate-y-20 transition-all duration-500 ease-out pointer-events-none">
+    
+    <button onclick="openSecretOS()" class="group flex items-center gap-3 bg-white/90 backdrop-blur-md pl-2 pr-6 py-2 rounded-full shadow-[0_8px_30px_rgba(0,0,0,0.3)] border border-white/50 hover:scale-105 active:scale-95 transition-transform cursor-pointer pointer-events-auto whitespace-nowrap w-max max-w-[90vw]">
+    
+        <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center text-white shadow-lg group-hover:rotate-12 transition-transform duration-300 border border-blue-400 shrink-0">
+            <i class="fas fa-flag-checkered text-lg"></i>
         </div>
+        <div class="flex flex-col items-start text-left overflow-hidden">
+            <span class="text-[9px] font-apple text-gray-500 uppercase tracking-widest font-bold truncate w-full">Sudah Selesai?</span>
+            <span class="text-sm font-apple text-gray-900 font-bold leading-none group-hover:text-blue-600 transition-colors">
+                Waktunya memulai perjalanan! 
+            </span>
+        </div>
+    </button>
+</div>
+
+<div id="osOverlay" class="fixed inset-0 z-[9999] hidden flex-col items-center justify-center bg-black/50 backdrop-blur-sm p-4 opacity-0 transition-opacity duration-300">
+    
+    <div class="relative w-full max-w-4xl glass-window rounded-xl overflow-hidden flex flex-col shadow-2xl animate-apple transform transition-all duration-300">
+        
+        <div class="h-10 px-4 flex items-center justify-between border-b border-gray-300/30 bg-white/50 shrink-0">
+            <div class="flex gap-2">
+                <button onclick="closeSecretOS()" class="w-3 h-3 rounded-full bg-[#FF5F57] border border-[#E0443E] hover:bg-[#FF5F57]/80"></button>
+                <div class="w-3 h-3 rounded-full bg-[#FEBC2E] border border-[#D89E24]"></div>
+                <div class="w-3 h-3 rounded-full bg-[#28C840] border border-[#1AAB29]"></div>
+            </div>
+            <div class="text-[10px] font-apple font-semibold text-gray-600 flex items-center gap-1 opacity-80">
+                <i class="fas fa-play-circle"></i> gamada-menyapa-sumedang.mov
+            </div>
+            <div class="w-10"></div>
+        </div>
+
+        <div class="w-full aspect-video bg-black relative group shrink-0">
+            <video id="secretVideo" class="w-full h-full object-cover" controls playsinline controlsList="nodownload">
+                <source src="https://image2url.com/r2/default/videos/1768394132781-01d59a63-23e0-43fe-aeaa-29c206bfe40b.mp4" type="video/mp4">
+                Browser Anda tidak mendukung video.
+            </video>
+        </div>
+
+        <div id="retroNotification" class="hidden w-full bg-transparent border-t border-gray-300 p-4 md:p-6 gap-4 md:gap-6 items-start">
+            
+            <img src="https://image2url.com/r2/default/images/1768369157278-f8066e6c-6e39-4609-a59f-c89a8ab050f2.png" 
+                 class="w-28 h-28 md:w-36 md:h-36 object-contain drop-shadow-md filter contrast-125 shrink-0" 
+                 alt="Giwa">
+
+            <div class="flex-grow retro-box p-3 md:p-4 rounded-sm relative">
+                <div class="absolute top-4 -left-3 w-0 h-0 border-t-[8px] border-t-transparent border-r-[12px] border-r-[#1e40af] border-b-[8px] border-b-transparent"></div>
+
+                <h4 class="text-yellow-300 font-retro text-[10px] md:text-xs mb-2">GIWA SAYS:</h4>
+                <p class="text-white font-retro text-[8px] md:text-[10px] leading-loose mb-4">
+                    Perjalanan kita udah selesai, nih! Jangan lupa scan <span class="text-yellow-300">QR Code</span> di atas dan mengisi link Padlet untuk bergabung ke grup ya!
+                </p>
+
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://padlet.com/GamadaMenyapa/langkah-awal-untuk-menjadi-gamada-xytxb9wispq621u7" target="_blank" 
+                       class="px-4 py-2 bg-yellow-400 hover:bg-yellow-300 text-blue-900 font-retro text-[8px] border-b-4 border-yellow-600 active:border-b-0 active:translate-y-1 transition-all">
+                       Buka Padlet ➤
+                    </a>
+                    
+                    <button onclick="retryVideo()" 
+                            class="px-4 py-2 bg-red-500 hover:bg-red-400 text-white font-retro text-[8px] border-b-4 border-red-700 active:border-b-0 active:translate-y-1 transition-all">
+                        <i class="fas fa-undo mr-1"></i> Retry?
+                    </button>
+                </div>
+            </div>
+        </div>
+
     </div>
-</section>
+</div>
 
 <script>
-    const video = document.getElementById('myVideo');
-    const seekSlider = document.getElementById('seekSlider');
-    const currentTimeText = document.getElementById('currentTime');
-    const durationText = document.getElementById('duration');
-    const gamePopup = document.getElementById('gamePopup');
-    const mobilePlayIcon = document.getElementById('mobilePlayIcon');
-    const mobileMuteIcon = document.getElementById('mobileMuteIcon');
+    document.addEventListener("DOMContentLoaded", () => {
+        // --- LOGIC TOMBOL MELAYANG (Footer Detection) ---
+        const floatBtn = document.getElementById('floatBtnContainer');
+        const footerTarget = document.querySelector('footer'); // Mencari tag <footer>
 
-    // Update Slider
-    video.addEventListener('timeupdate', () => {
-        const val = (video.currentTime / video.duration) * 100;
-        seekSlider.value = val;
-        currentTimeText.textContent = formatTime(video.currentTime);
-        if (!video.ended) gamePopup.classList.add('hidden');
-    });
-
-    video.addEventListener('loadedmetadata', () => {
-        durationText.textContent = formatTime(video.duration);
-    });
-
-    seekSlider.addEventListener('input', () => {
-        const time = (seekSlider.value / 100) * video.duration;
-        video.currentTime = time;
-    });
-
-    // EVENT SELESAI
-    video.addEventListener('ended', () => {
-        video.pause();
-        gamePopup.classList.remove('hidden'); // Munculkan Popup RPG
-    });
-
-    function togglePlay() {
-        if (video.paused) {
-            video.play();
-            gamePopup.classList.add('hidden');
-            if(mobilePlayIcon) mobilePlayIcon.className = 'fas fa-pause';
+        if (footerTarget) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Footer terlihat -> Munculkan Tombol
+                        floatBtn.classList.remove('opacity-0', 'translate-y-20', 'pointer-events-none');
+                    } else {
+                        // Footer tidak terlihat -> Sembunyikan Tombol
+                        floatBtn.classList.add('opacity-0', 'translate-y-20', 'pointer-events-none');
+                    }
+                });
+            }, { threshold: 0.1 }); // Trigger saat 10% footer terlihat
+            
+            observer.observe(footerTarget);
         } else {
-            video.pause();
-            if(mobilePlayIcon) mobilePlayIcon.className = 'fas fa-play';
+            // Fallback jika tidak ada <footer>: Muncul setelah scroll 500px
+            window.addEventListener('scroll', () => {
+                if(window.scrollY > 500) {
+                     floatBtn.classList.remove('opacity-0', 'translate-y-20', 'pointer-events-none');
+                } else {
+                     floatBtn.classList.add('opacity-0', 'translate-y-20', 'pointer-events-none');
+                }
+            });
         }
+    });
+
+    // --- LOGIC MODAL WINDOW ---
+    const overlay = document.getElementById('osOverlay');
+    const secretVideo = document.getElementById('secretVideo');
+    const retroNotif = document.getElementById('retroNotification');
+    let isPopupShown = false; 
+
+    function openSecretOS() {
+        overlay.classList.remove('hidden');
+        setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+        secretVideo.play().catch(e => console.log("Autoplay blocked"));
     }
 
-    function toggleMute() {
-        video.muted = !video.muted;
-        if(mobileMuteIcon) mobileMuteIcon.className = video.muted ? 'fas fa-volume-mute text-red-400' : 'fas fa-volume-up';
+    function closeSecretOS() {
+        overlay.classList.add('opacity-0');
+        setTimeout(() => {
+            overlay.classList.add('hidden');
+            secretVideo.pause();
+            resetState(); // Reset saat tutup
+        }, 300);
     }
 
-    function replayVideo() {
-        video.currentTime = 0;
-        video.play();
-        gamePopup.classList.add('hidden');
-        if(mobilePlayIcon) mobilePlayIcon.className = 'fas fa-pause';
+    function retryVideo() {
+        resetState();
+        secretVideo.play();
     }
 
-    function toggleFullscreen() {
-        const container = document.getElementById('videoContainer').parentElement;
-        if (!document.fullscreenElement) {
-            if (container.requestFullscreen) container.requestFullscreen();
-            else if (container.webkitRequestFullscreen) container.webkitRequestFullscreen();
-        } else {
-            if (document.exitFullscreen) document.exitFullscreen();
+    function resetState() {
+        secretVideo.currentTime = 0;
+        retroNotif.classList.add('hidden');
+        retroNotif.classList.remove('flex', 'animate-popup');
+        isPopupShown = false;
+    }
+
+    // --- LOGIC WAKTU (1:16 = 76 Detik) ---
+    secretVideo.addEventListener('timeupdate', () => {
+        if (secretVideo.currentTime >= 76 && !isPopupShown) {
+            showRetroPopup();
         }
+    });
+
+    function showRetroPopup() {
+        isPopupShown = true;
+        retroNotif.classList.remove('hidden');
+        retroNotif.classList.add('flex', 'animate-popup');
+        
+        // Auto scroll ke bawah agar notif terlihat di HP
+        retroNotif.scrollIntoView({ behavior: 'smooth', block: 'end' });
     }
 
-    function formatTime(seconds) {
-        const minutes = Math.floor(seconds / 60);
-        seconds = Math.floor(seconds % 60);
-        return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-    }
-
-    document.getElementById('videoContainer').addEventListener('contextmenu', (e) => e.preventDefault());
+    // Tutup jika klik area gelap di luar window
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeSecretOS();
+    });
 </script>
-
     <!-- Footer -->
     <footer class="bg-ugm-blue text-white py-12">
         <div class="container mx-auto px-4 text-center">
@@ -2051,46 +2030,104 @@
         Object.keys(facilityImages).forEach(id => initCarousel(id, facilityImages[id]));
 
         // AUDIO & WELCOME LOGIC
-        var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-        var player;
-        
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('music-player', {
-                height: '1', width: '1', videoId: 'qXT0B8ZN3Ls',
-                playerVars: { 'autoplay': 0, 'controls': 0, 'start': 20, 'loop': 1, 'playlist': 'qXT0B8ZN3Ls', 'origin': window.location.origin },
-                events: { 'onReady': onPlayerReady }
-            });
-        }
-        
-        function onPlayerReady(event) { event.target.setVolume(50); }
-        
-        function enterSite() {
-            const overlay = document.getElementById('welcome-overlay');
-            overlay.style.opacity = '0';
-            // Play Audio on Click
-            if (player && typeof player.playVideo === 'function') { player.playVideo(); }
-            
-            setTimeout(() => {
-                overlay.style.display = 'none';
-                document.getElementById('body-container').classList.remove('h-screen', 'overflow-hidden');
-                document.getElementById('musicToggle').classList.remove('hidden');
-            }, 700);
-        }
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-        function toggleMusic() {
-            if (!player) return;
-            if (player.getPlayerState() === 1) { player.pauseVideo(); updateMusicButton(false); } 
-            else { player.playVideo(); updateMusicButton(true); }
+var player;
+var isPlayerReady = false; // Penanda apakah player sudah siap
+var userHasClickedEnter = false; // Penanda apakah user sudah klik masuk
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('music-player', {
+        height: '1', 
+        width: '1', 
+        videoId: 'qXT0B8ZN3Ls',
+        playerVars: { 
+            'autoplay': 0, 
+            'controls': 0, 
+            'start': 20, 
+            'loop': 1, 
+            'playlist': 'qXT0B8ZN3Ls', 
+            'origin': window.location.origin,
+            'playsinline': 1 // Penting untuk iOS agar tidak fullscreen
+        },
+        events: { 
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange 
         }
+    });
+}
+
+function onPlayerReady(event) { 
+    isPlayerReady = true;
+    event.target.setVolume(50);
+    
+    // Cek: Apakah user sudah klik enter DULUAN sebelum video siap?
+    // Jika ya, langsung putar sekarang.
+    if (userHasClickedEnter) {
+        player.playVideo();
+        updateMusicButton(true);
+    }
+}
+
+// Opsional: Untuk memastikan ikon sesuai status asli video
+function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING) {
+        updateMusicButton(true);
+    } else {
+        updateMusicButton(false);
+    }
+}
+
+function enterSite() {
+    const overlay = document.getElementById('welcome-overlay');
+    overlay.style.opacity = '0';
+    
+    // TANDAI BAHWA USER SUDAH KLIK
+    userHasClickedEnter = true;
+
+    // Coba putar audio
+    if (isPlayerReady && player && typeof player.playVideo === 'function') { 
+        player.playVideo(); 
+    } else {
+        console.log("Player belum siap, menunggu onPlayerReady...");
+    }
+    
+    setTimeout(() => {
+        overlay.style.display = 'none';
+        // Pastikan elemen body ada sebelum akses classList
+        const bodyContainer = document.getElementById('body-container');
+        if(bodyContainer) bodyContainer.classList.remove('h-screen', 'overflow-hidden');
         
-        function updateMusicButton(isPlaying) {
-            const icon = document.getElementById('musicToggleIcon');
-            if (isPlaying) { icon.classList.remove('fa-volume-mute'); icon.classList.add('fa-volume-up'); } 
-            else { icon.classList.remove('fa-volume-up'); icon.classList.add('fa-volume-mute'); }
-        }
+        const musicToggle = document.getElementById('musicToggle');
+        if(musicToggle) musicToggle.classList.remove('hidden');
+    }, 700);
+}
+
+function toggleMusic() {
+    if (!player || !isPlayerReady) return;
+    
+    if (player.getPlayerState() === 1) { // 1 = Playing
+        player.pauseVideo(); 
+    } else { 
+        player.playVideo(); 
+    }
+}
+
+function updateMusicButton(isPlaying) {
+    const icon = document.getElementById('musicToggleIcon');
+    if (!icon) return;
+
+    if (isPlaying) { 
+        icon.classList.remove('fa-volume-mute'); 
+        icon.classList.add('fa-volume-up'); 
+    } else { 
+        icon.classList.remove('fa-volume-up'); 
+        icon.classList.add('fa-volume-mute'); 
+    }
+}
         
         // Window Scroll Logic
         window.addEventListener('scroll', function() {
